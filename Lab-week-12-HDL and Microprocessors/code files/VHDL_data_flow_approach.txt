@@ -1,0 +1,14 @@
+entity Logic is
+	port(
+		W: in STD_LOGIC;
+		X: in STD_LOGIC;
+		Y : in  STD_LOGIC;
+		Z : in STD_LOGIC;
+		F : out STD_LOGIC;
+);
+End Logic;
+Architecture Behavioral of  Logic is
+begin
+	F<= (W and X and Y) or (X and Y and Z) or (not W and Y and Z)
+end Behavioral;
+

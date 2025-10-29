@@ -1,0 +1,39 @@
+Library IEEE;
+Use IEEE.STD_LOGIC_1164.ALL;
+
+Entity tb_and_gate is
+End tb_and_gate;
+
+architecture behavior of tb_and_gate is
+	Signal A, B, Y; STD_LOGIC;
+Begin
+	uut.entity work.tute_12
+		port map(
+			W => W,
+			X => X,
+			Y=> Y,
+			Z=>Z,
+			F=> F);
+
+	-- Test process
+process
+begin
+	W <= ‘0’ ; X <= ‘0’ ; Y <= ‘0’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘0’ ; Y <= ‘0’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘0’ ; Y <= ‘1’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘0’ ; Y <= ‘1’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘1’ ; Y <= ‘0’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘1’ ; Y <= ‘0’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘1’ ; Y <= ‘1’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘0’ ; X <= ‘1’ ; Y <= ‘1’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘0’ ; Y <= ‘0’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘0’ ; Y <= ‘0’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘0’ ; Y <= ‘1’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘0’ ; Y <= ‘1’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘1’ ; Y <= ‘0’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘1’ ; Y <= ‘0’ ; Z<=’1’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘1’ ; Y <= ‘1’ ; Z<=’0’ wait for 10 ns;
+	W <= ‘1’ ; X <= ‘1’ ; Y <= ‘1’ ; Z<=’1’ wait for 10 ns;
+	Wait;
+end process;
+end behavior;

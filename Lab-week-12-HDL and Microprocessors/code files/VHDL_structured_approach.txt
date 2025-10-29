@@ -1,0 +1,24 @@
+entity Logic is
+	port(IN1, IN2, IN3, IN4 : in bit; OUT5: out bit);
+architecture LogicCircuit of Circuit is
+	component NOT_gate is
+		port(A:in bit;X:out bit);
+	end component NOT_GATE;
+	
+	component AND_gate3 is
+		port(A, B,C: in bit; X:out bit);
+	end component AND_GATE;
+
+	component OR_gate3 is
+		port (A,B, C : in bit; X:out bit);
+	end component OR_GATE;
+	
+signal OUT1, OUT2, OUT3, OUT4: bit;
+begin
+	G1: NOT_gate port map( A=>IN1, X=>OUT1);
+	G2: And_gate3 port map (A=>IN1, B=>IN2, C=>IN3, X=>OUT2)
+	G3: And_gate3 port map (A=>IN2, B=>IN3, C=>IN4, X=>OUT3)
+	G4: And_gate3 port map (A=>IN2, B=>OUT1, C=>IN4, X=>OUT4)
+	G5: OR_gate3 port map (A=> OUT2 , B=>OUT3, C=>OUT4, X=>OUT5)
+end architecture LogicCircuit;
+
